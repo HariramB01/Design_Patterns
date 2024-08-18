@@ -1,0 +1,60 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main {
+    + main(String[] args)
+}
+
+class Vehicle {
+    +fuelType : FuelType
+    +fuel() : String
+    +setVehicleFuelType(FuelType type)
+}
+
+class FuelType {
+    {abstract} +display() : String
+}
+
+class Petrol {
+    +display() : String
+}
+
+class Diesel {
+    +display() : String
+}
+
+class Air {
+    +display() : String
+}
+
+class Car {
+    +Car()
+}
+
+class Bike {
+    +Bike()
+}
+
+class Bicycle {
+    +Bicycle()
+}
+
+Main --> Vehicle : uses
+Vehicle --> FuelType : has
+FuelType <|-- Petrol
+FuelType <|-- Diesel
+FuelType <|-- Air
+Vehicle <|-- Car
+Vehicle <|-- Bike
+Vehicle <|-- Bicycle
+
+' Specific interactions in Main class
+Main --> Car : creates
+Main --> Bike : creates
+Main --> Bicycle : creates
+
+note right of Main : car.fuel() -> "This vehicle runs with Petrol"
+note right of Main : bike.fuel() -> "This vehicle runs with Diesel"
+note right of Main : bicycle.fuel() -> "This vehicle runs with Air"
+
+@enduml
