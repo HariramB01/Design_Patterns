@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/CombinedStrategyAndObserverPattern/pom.xml" />
         <option value="$PROJECT_DIR$/FactoryDP/pom.xml" />
         <option value="$PROJECT_DIR$/FDP/pom.xml" />
+        <option value="$PROJECT_DIR$/BuilderDP/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
