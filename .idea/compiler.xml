@@ -15,6 +15,7 @@
         <module name="FDP" />
         <module name="CombinedStrategyAndObserverPattern" />
         <module name="practicingStrategyPattern" />
+        <module name="BuilderDP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
