@@ -1,0 +1,58 @@
+@startuml
+
+package com.project {
+
+    class App {
+        + main(String[] args) : void
+    }
+
+    class CourseFactory {
+        + getCourse(courseType : String) : Course
+    }
+
+    abstract class Course {
+        + modules : List<Module>
+        + Course()
+        + getModules() : void
+        + createCourse() : abstract void
+    }
+
+    class HLD extends Course {
+        + createCourse() : void
+    }
+
+    class LLD extends Course {
+        + createCourse() : void
+    }
+
+    interface Module {
+        + display() : void
+    }
+
+    class ExampleModule1 implements Module {
+        + ExampleModule1()
+        + display() : void
+    }
+
+    class ExampleModule2 implements Module {
+        + ExampleModule2()
+        + display() : void
+    }
+
+    class ExampleModule3 implements Module {
+        + ExampleModule3()
+        + display() : void
+    }
+
+    class ExampleModule4 implements Module {
+        + ExampleModule4()
+        + display() : void
+    }
+
+    CourseFactory --> Course : creates
+    Course "1" --> "many" Module
+    App --> CourseFactory
+
+}
+
+@enduml
